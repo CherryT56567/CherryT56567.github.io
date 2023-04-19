@@ -14,7 +14,7 @@ function Login(){
 
 // Handle the logout button click event
 function Logout() {
-  auth0.logout({
+  auth0Cli.logout({
     returnTo: window.location.href
   });
   localStorage.removeItem('access_token');
