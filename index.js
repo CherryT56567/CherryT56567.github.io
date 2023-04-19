@@ -14,9 +14,10 @@ loginButton.addEventListener('click', () => {
 });
 
 // Handle the logout button click event
-const logoutButton = document.getElementById('logout-button');
-logoutButton.addEventListener('click', () => {
-  auth0Cli.logout();
+document.getElementById('logout-button').addEventListener('click', () => {
+  auth0.logout({
+    returnTo: window.location.href
+  });
 });
 
 // Handle the user information display
