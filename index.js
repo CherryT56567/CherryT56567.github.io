@@ -62,8 +62,6 @@ if (accessToken && idToken) {
         <p>Welcome back, ${user.name}!</p>
         <img src="${user.picture}" alt="Profile Picture" />
       `;
-      console.log(accessToken);
-      console.log(idToken);
 
       // Show the logout button and hide the login button
       loginButton.style.display = 'none';
