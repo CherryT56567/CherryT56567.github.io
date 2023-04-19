@@ -8,17 +8,18 @@ const auth0Cli = new auth0.WebAuth({
 });
 
 // Handle the login button click event
-const loginButton = document.getElementById('login-button');
-loginButton.addEventListener('click', () => {
+function Login(){
   auth0Cli.authorize();
-});
+}
 
 // Handle the logout button click event
-document.getElementById('logout-button').addEventListener('click', () => {
+function Logout() {
   auth0.logout({
     returnTo: window.location.href
   });
-});
+  localStorage.removeItem('access_token');
+  localStorage.removeItem('id_token');
+}
 
 // Handle the user information display
 const userInfo = document.getElementById('user-info');
@@ -59,6 +60,8 @@ if (accessToken && idToken) {
         <p>Welcome back, ${user.name}!</p>
         <img src="${user.picture}" alt="Profile Picture" />
       `;
+      console.log(accessToken);
+      console.log(idToken);
 
       // Show the logout button and hide the login button
       loginButton.style.display = 'none';
