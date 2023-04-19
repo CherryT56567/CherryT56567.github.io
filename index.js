@@ -33,8 +33,8 @@ auth0Cli.parseHash((err, authResult) => {
 
     // Retrieve the user's profile information
     auth0Cli.client.userInfo(authResult.accessToken, (err, user) => {
-      console.log('user object:', user);
       if (user) {
+        console.log('user object:', user);
         // Display the user's name and profile picture
         userInfo.innerHTML = `
           <p>Welcome, ${user.name}!</p>
