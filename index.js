@@ -23,6 +23,8 @@ function Logout() {
 
 // Handle the user information display
 const userInfo = document.getElementById('user-info');
+const loginbutton = document.getElementById('login-button');
+const logoutbutton = document.getElementById('logout-button');
 auth0Cli.parseHash((err, authResult) => {
   if (authResult && authResult.accessToken && authResult.idToken) {
     // Store the user's access token and ID token
