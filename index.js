@@ -39,7 +39,8 @@ auth0Cli.parseHash((err, authResult) => {
         userInfo.innerHTML = `
           <p>Welcome, ${user.name}!</p>
           <img src="${user.picture}" alt="Profile Picture" />
-          <p>${s}</p>
+          <p>User Metadata:</p>
+          <pre>${JSON.stringify(user.user_metadata, null, 2)}</pre>
         `;
 
         // Show the logout button and hide the login button
