@@ -33,11 +33,13 @@ auth0Cli.parseHash((err, authResult) => {
 
     // Retrieve the user's profile information
     auth0Cli.client.userInfo(authResult.accessToken, (err, user) => {
+      var s = JSON.stringify(user.user_metadata, null, 2);
       if (user) {
         // Display the user's name and profile picture
         userInfo.innerHTML = `
           <p>Welcome, ${user.name}!</p>
           <img src="${user.picture}" alt="Profile Picture" />
+          <p>${s}</p>
         `;
 
         // Show the logout button and hide the login button
