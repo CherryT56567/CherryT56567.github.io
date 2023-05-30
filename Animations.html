@@ -77,6 +77,36 @@
 
       /* Images used */
       .img1 { background-image: url("https://raw.githubusercontent.com/Cherrytree56567/Cherrytree56567.github.io/main/bg_bggenerator_com.png"); }
+      
+      .btn {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      /* Green */
+      .success {
+        border-color: #04AA6D;
+        color: green;
+      }
+      
+      .success:hover {
+        background-color: #04AA6D;
+        color: white;
+      }
+      
+      .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>
@@ -86,6 +116,10 @@
       <a href="https://cherrytree56567.github.io/blog.html">Blog</a>
       <a href="https://cherrytree56567.github.io/">Home</a>
     </div>
+    
+    <center>
+    <button class="btn success center" style="position:fixed;"><a class="success" style="text-decoration:none;" href="about:blank"><br><br>The Bookshelf<br>By @cherrytree56567<br><br><br></a></button>
+    </center>
     
     <div class="bg-image img1"></div>
     
