@@ -122,6 +122,19 @@ const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 const size = urlParams.get('size');
+if (size == null) {
+var sizea = prompt("How big is your story in Chunks?");
+var tex = [];
+for (let i = 0; i < sizea; i++) {
+    tex[i] = prompt("Chunk " + (i+1) +"? ");
+}
+var texd = "https://Cherrytree56567.github.io/Gothic.html?size=" + sizea;
+for (let i = 0; i < sizea; i++) {
+    var ds = i + 1;
+    texd += "&a" + ds.toString() + "=" + encodeURIComponent(tex[i]);
+}
+document.getElementsByTagName("body")[0].innerHTML = "Here is your link: " + texd;
+}
 console.log(size);
 let c = [];
 for (let i = 1; i < (parseInt(size) + 1); i++) {
